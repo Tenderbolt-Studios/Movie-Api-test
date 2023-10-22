@@ -28,6 +28,7 @@
     }
     main{
       display:grid;
+      min-height:100%;
       grid-template-rows:auto auto 1fr auto;
       grid-template-columns:1fr;
     }
@@ -47,7 +48,7 @@
     .options{
       display:grid;
       grid-template-rows:1fr auto;
-      padding:20px 10%;
+      margin:20px 10%;
       color:#666;
       text-align:center;
       max-height:230px;
@@ -71,6 +72,7 @@
       border-radius:10px;
     }
     .player{
+      margin:0px 10%;
       display:grid;
       place-items:center;
     }
@@ -165,7 +167,8 @@
       display:grid;
       grid-template-rows:auto 1fr;
       grid-gap:10px;
-      padding:10px 5%;
+      margin:10px 10%;
+      padding:10px;
       background:#090909;
       color:#555;
       text-align:left;
@@ -188,6 +191,18 @@
     table tr{
       border:1px solid #222;
     }
+    @media only screen and (max-width: 600px) {
+      nav{
+        background:none;
+      }
+      .player {
+        margin:0px 0%;
+      }
+      .history{
+        margin:0px;
+        padding:10px 5%;
+      }
+    }
   </style>
 </head>
 
@@ -208,7 +223,7 @@
     <a onclick="openSearch()">Search</a>
     <a href="#history">History</a>
   </nav>
-  <div class="player" style="width: 100%;">
+  <div class="player">
         <iframe src="" allowfullscreen></iframe>
   </div>
     <div class="options">
