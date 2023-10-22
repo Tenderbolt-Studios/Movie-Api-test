@@ -24,6 +24,7 @@
       background:#111;
       font-family: 'Lexend', sans-serif;
       overflow-y:scroll;
+      scroll-behavior:smooth;
     }
     main{
       display:grid;
@@ -205,7 +206,7 @@
   <nav>
     <span>MovieDB</span>
     <a onclick="openSearch()">Search</a>
-    <a href="">History</a>
+    <a href="#history">History</a>
   </nav>
   <div class="player" style="width: 100%;">
         <iframe src="" allowfullscreen></iframe>
@@ -225,7 +226,7 @@
             Number" fields empty.
         </p>
     </div>
-        <div class="history">
+        <div class="history" id="history">
         <div class="d-flex justify-content-between m-3">
             <h3>Watch History</h3>
             <button type="button" class="btn btn-sm btn-outline-secondary" onclick="clear_history();">
